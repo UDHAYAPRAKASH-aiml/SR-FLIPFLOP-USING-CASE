@@ -34,15 +34,51 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **Procedure**
 
-/* write all the steps invloved */
+/* write all the steps invloved */:
+step 1: first go to qratus prime software
+step2: create folder and type the program
+step3:In the veriog you get RTL diagram
+step4:And the waveform diagram
+step 5:end the program 
 
-**PROGRAM**
+**PROGRAM**:
+```
+module sr_flipflop (
+    input clk,    // Clock signal
+    input reset,  // Active-high reset signal
+    input s,      // Set input
+    input r,      // Reset input
+    output reg q, // Output
+    output reg q_bar // Complement of output
+);
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            q <= 1'b0;      // Reset the flip-flop
+            q_bar <= 1'b1;  // Complement output
+        end
+        else begin
+            case ({s, r})
+                2'b00: ;             // No change
+                2'b01: begin         // Reset
+                    q <= 1'b0;
+                    q_bar <= 1'b1;
+                end
+                2'b10: begin         // Set
+                    q <= 1'b1;
+                    q_bar <= 1'b0;
+                end
+                2'b11: begin         // I
+```
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
 */
+RTL diagram:
+![de6](https://github.com/user-attachments/assets/6e5b985d-901c-436d-8beb-e996018a6dfe)
 
-**RTL LOGIC FOR FLIPFLOPS**
 
-**TIMING DIGRAMS FOR FLIP FLOPS**
+**TIMING DIGRAMS FOR FLIP FLOPS**:
+![de 6 w](https://github.com/user-attachments/assets/2eab4c9c-9233-4566-8023-14a0820a3401)
 
-**RESULTS**
+
+**RESULT**:
+Thus the S-R flipflop are verified and the truth table are verified
