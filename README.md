@@ -40,9 +40,9 @@ step2: create folder and type the program
 step3:In the veriog you get RTL diagram
 step4:And the waveform diagram
 step 5:end the program 
-
+```
 **PROGRAM**:
-
+```
 module sr_flipflop (
     input clk,    // Clock signal
     input reset,  // Active-high reset signal
@@ -68,8 +68,11 @@ module sr_flipflop (
                     q_bar <= 1'b0;
                 end
                 2'b11: begin         // I
+
+/* Program for flipflops and verify its truth table in quartus using Verilog programming.
+Developed by:UDHAYA PRAKASH V
+RegisterNumber:24901131
 ```
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
 */
 RTL diagram:
 ![de6](https://github.com/user-attachments/assets/6e5b985d-901c-436d-8beb-e996018a6dfe)
@@ -79,4 +82,4 @@ RTL diagram:
 ![de 6 w](https://github.com/user-attachments/assets/2eab4c9c-9233-4566-8023-14a0820a3401)
 
 **RESULT**:
-Thus the S-R flipflop are verified and the truth table are verified
+Thus the S-R flipflop are verified and the truth table are verified.
